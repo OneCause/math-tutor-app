@@ -1,0 +1,43 @@
+Scenario: The math application successfully loads in your web browser.
+
+* When the math application loads, two random numbers should be viewable. 
+    * Page refresh should load a new set of random numbers.
+    * The page title should read "MathTutorApp".
+    * "Math Challenge" should be displayed at the top of the application and be aligned center-left.
+    * "Addition" should fall under "Math Challenge" and be aligned center-left. 
+    * The random numbers should be vertically stacked with the addition symbol to their left. 
+    * The "Answers" input field should be below the solid black line. The solid black line separates the random numbers from the input field.
+
+* The Answer input box in the math application should be clickable. 
+    * When the Answer field is empty, you will see "Answer" as grey ghost text.
+    * The input box should accept any character type.
+    * The input box has no character length requirements.
+    * When you click into the Answer field, the grey ghost text will turn blue and shift to just below the black bar.
+    * When you click into the Answer field, the answer field cursor will turn blue and blink.
+
+* The Answer button will not be clickable until the user enters numbers into the answer field.
+    * Letters or special characters will not enable the Answer button.
+    * When you hover over the disabled Answer button, a tooltip message will appear on the page. "Please provide an answer."
+    * When enabled, the Answer button will have a blue background and white text.
+
+
+
+
+
+Scenario: Happy Path | A user successfully enters the correct answer to the math application addition problem.
+
+* When the user enters the correct solution to the math problem and clicks the enabled Answer button, then a message "That's right! Try another one." will appear in the upper right corner.
+    * The message will have a green background and white text.
+    * The success message will also contain a white checkmark to the left of the text. 
+    * Once the application approves the answer and the success message appears, the numbers will randomize and allow you to try a new math problem. 
+
+
+
+
+
+Scenario: Error Path | A user enters the incorrect answer to the math application addition problem.
+
+* When the user enters an incorrect answer to the math problem and clicks the enabled Answer button, then a message "Sorry, that is not correct. Please try again" will appear. 
+    * The message will have a red background and white text. 
+    * The message will also contain a white X.
+    * The original numbers will not change/refresh when an incorrect answer is submitted. 

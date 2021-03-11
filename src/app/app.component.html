@@ -11,7 +11,7 @@
           <!-- X -->
           <div fxLayout="row" style="padding: 8px; width: 100px;">
             <div style="width: 100%; text-align: right;">
-              <span [innerHtml]="xValue"></span>
+              <span [innerHtml]="xValue" data-cy="xValue"></span>
             </div>
           </div>
           <!-- Y -->
@@ -26,7 +26,7 @@
           <!-- Answer -->
           <mat-form-field style="padding: 8px; width: 92px;">
             <mat-label>Answer</mat-label>
-            <input #appInputSelect matInput type="number" [(ngModel)]="answer" style="text-align: right;">
+            <input #appInputSelect matInput type="number" [(ngModel)]="answer" style="text-align: right;" data-cy="inputHere">
           </mat-form-field>
         </div>
       </mat-card-content>
@@ -35,7 +35,8 @@
           <button mat-raised-button 
                   color="primary" 
                   (click)="checkAnswer()" 
-                  [disabled]="answer == null">
+                  [disabled]="answer == null"
+                  data-cy="answer_button">
             Answer
           </button>
         </div>

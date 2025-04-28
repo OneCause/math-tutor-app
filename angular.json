@@ -69,18 +69,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "math-tutor-app:build"
+            "buildTarget": "math-tutor-app:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "math-tutor-app:build:production"
+              "buildTarget": "math-tutor-app:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "math-tutor-app:build"
+            "buildTarget": "math-tutor-app:build"
           }
         },
         "test": {

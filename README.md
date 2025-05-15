@@ -8,6 +8,7 @@ When running commands make sure you are within terminal and not an IDE.
 ## Mac
 
 [node](https://nodejs.org/en/download) version 18.20.3 or higher
+
 [command line tools](https://medium.com/@ivaishali/xcode-command-line-tools-26f95ba6fb71)
 
 ## Windows

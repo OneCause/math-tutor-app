@@ -5,13 +5,13 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 # Pre-requisites
 When running commands make sure you have navigated to your workspace terminal and not home directory.
 
-## Mac
+### Mac
 
 [node](https://nodejs.org/en/download) version 18.20.3 or higher
 
 [command line tools](https://medium.com/@ivaishali/xcode-command-line-tools-26f95ba6fb71)
 
-## Windows
+### Windows
 
 [node](https://nodejs.org/en/download) version 18.20.3 or higher
 

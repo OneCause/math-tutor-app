@@ -2,13 +2,15 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 19.2.11
 
-## Pre-requisites
-Mac
+# Pre-requisites
+
+## Mac
 
 [node](https://nodejs.org/en/download) version 18.20.3 or higher
 [command line tools](https://medium.com/@ivaishali/xcode-command-line-tools-26f95ba6fb71)
 
-Windows
+## Windows
+
 [node](https://nodejs.org/en/download) version 18.20.3 or higher
 
 ## Build

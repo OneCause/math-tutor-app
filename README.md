@@ -3,7 +3,7 @@
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 19.2.11
 
 # Pre-requisites
-When running commands make sure you are within terminal and not an IDE.
+When running commands make sure you have navigated to your workspace terminal and not home directory.
 
 ## Mac
 

@@ -1,6 +1,19 @@
 # MathTutorApp
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.1.0.
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 19.2.11
+
+## Pre-requisites
+Mac
+
+[node](https://nodejs.org/en/download) version 18.20.3 or higher
+[command line tools](https://medium.com/@ivaishali/xcode-command-line-tools-26f95ba6fb71)
+
+Windows
+[node](https://nodejs.org/en/download) version 18.20.3 or higher
+
+## Build
+
+Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
 
 ## Development server
 
@@ -9,10 +22,6 @@ Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app w
 ## Code scaffolding
 
 Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
 
 ## Running unit tests
 

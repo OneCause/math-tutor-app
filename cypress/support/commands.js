@@ -12,3 +12,9 @@ Cypress.Commands.add('login', user => {
         return {...response.body.user, ...user}
       })
   })
+
+Cypress.Commands.add('assertAlertText', (expectedText) => {
+  cy.on('window:alert', (text) => {
+    expect(text).to.eq(expectedText)
+  })
+})

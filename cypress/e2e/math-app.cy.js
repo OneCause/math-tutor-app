@@ -37,4 +37,8 @@ describe('Math Challenge - Core Functionality', () => {
      cy.get(answerButton).click()
      cy.expectErrorToast(toastData.toastErrorMessage)
   })
+
+    it('TC03: disables button when input is empty', () => {
+    cy.get(answerButton).should('be.disabled')
+  })
 })

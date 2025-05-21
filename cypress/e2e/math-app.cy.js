@@ -1,23 +1,21 @@
+import selectors from '../support/selectors/mathAppComponent.json'
+
+const { xValue, yValue, userInput, answerButton } = selectors
+
 describe('random math app', () => {
   it('can make calculations', () => {
     cy.visit('/')
 
-    // Listen for the alert event instead of stubbing
-    cy.on('window:alert', (str) => {
-      expect(str).to.eq('Correct!')
+    cy.on('window:alert', (text) => {
+      expect(text).to.eq('Correct!')
     })
 
-    cy.get('[data-testid="x-value"]').invoke('text').then((xText) => {
-      cy.get('[data-testid="y-value"]').invoke('text').then((yText) => {
-        const x = Number(xText.trim())
-        const y = Number(yText.trim())
-        const total = x + y
+    cy.get(xValue).invoke('text').then((xText) => {
+      cy.get(yValue).invoke('text').then((yText) => {
+        const result = Number(xText.trim()) + Number(yText.trim())
 
-        cy.get('[data-testid="user-input"]')
-          .focus()
-          .type(total.toString(), { force: true })
-
-        cy.get('[data-testid="answer-button"]').click()
+        cy.get(userInput).focus().type(result.toString(), { force: true })
+        cy.get(answerButton).click()
       })
     })
   })

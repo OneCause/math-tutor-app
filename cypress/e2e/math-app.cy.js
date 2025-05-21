@@ -41,4 +41,15 @@ describe('Math Challenge - Core Functionality', () => {
     it('TC03: disables button when input is empty', () => {
     cy.get(answerButton).should('be.disabled')
   })
+
+  it('TC04: blocks non-numeric characters in input', () => {
+  const fullyInvalidInputs = ['abc', '@', '!', '++', '--', '+-']
+
+  fullyInvalidInputs.forEach((val) => {
+    cy.get(userInput)
+      .clear({ force: true })
+      .type(val, { force: true })
+      .should('have.value', '') // input remains empty
+  })
+})
 })

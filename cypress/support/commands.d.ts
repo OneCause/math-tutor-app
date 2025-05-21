@@ -7,5 +7,10 @@ declare namespace Cypress {
      * @param expectedText The string you expect the alert to contain
      */
     assertAlertText(expectedText: string): Chainable<void>
+
+    /**
+     * Waits until the math challenge is fully rendered by checking that both operands are non-empty
+     */
+    waitForMathChallenge(): Chainable<void>
   }
 }

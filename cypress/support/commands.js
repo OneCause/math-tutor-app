@@ -18,3 +18,8 @@ Cypress.Commands.add('assertAlertText', (expectedText) => {
     expect(text).to.eq(expectedText)
   })
 })
+
+Cypress.Commands.add('waitForMathChallenge', () => {
+  cy.get('[data-testid="x-value"]').should('not.be.empty')
+  cy.get('[data-testid="y-value"]').should('not.be.empty')
+})

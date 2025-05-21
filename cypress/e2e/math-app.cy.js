@@ -2,10 +2,14 @@ import selectors from '../support/selectors/mathAppComponent.json'
 
 const { xValue, yValue, userInput, answerButton } = selectors
 
-describe('random math app', () => {
-  it('can make calculations', () => {
-    cy.visit('/')
+describe('Math Challenge - Core Functionality', () => {
 
+  beforeEach(() => {
+    cy.visit('/')
+    cy.waitForMathChallenge()
+  })
+
+  it('TC01: shows correct alert for correct input', () => {
     cy.assertAlertText('Correct!')
 
     cy.get(xValue).invoke('text').then((xText) => {

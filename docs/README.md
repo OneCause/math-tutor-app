@@ -99,3 +99,38 @@ This submission reflects how I approach QA as a blend of strategy, automation, a
 - 📋 [Test Plan](docs/test-plan.md)
 - 📄 [Test Cases](docs/test-cases.md)
 - 🔮 [Future Coverage Notes](docs/future-coverage-notes.md)
+
+
+## 📁 Project Structure
+
+```
+.
+├── README.md
+├── package.json
+├── angular.json
+├── tsconfig.json
+├── tsconfig.spec.json
+├── src/
+│   └── app/
+│       ├── app.component.ts
+│       ├── app.component.spec.ts
+│       └── services/
+│           ├── calculator-service/
+│           │   └── calculator.service.ts
+│           └── message-service/
+│               └── message.service.ts
+├── cypress/
+│   ├── e2e/
+│   │   └── core-functionality.cy.ts
+│   ├── fixtures/
+│   └── support/
+│       └── commands.ts
+├── docs/
+│   ├── test-plan.md
+│   ├── test-cases.md
+│   ├── future-coverage-notes.md
+│   └── slides/
+│       ├── takehome-presentation.md
+│       └── takehome-presentation.pdf
+```
+

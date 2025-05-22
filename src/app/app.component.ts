@@ -8,7 +8,7 @@ import { MessageService } from './services/message-service/message.service';
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'],
-  standalone: false
+  standalone: false,
 })
 export class AppComponent {
   title = 'math-tutor-app';

@@ -16,11 +16,13 @@ This repository contains my QA-focused submission for the OneCause Senior Test E
 ## How to Run the App
 
 1. Install dependencies:
+
    ```bash
    npm install
    ```
 
 2. Start the app:
+
    ```bash
    npx ng serve
    ```
@@ -35,6 +37,7 @@ This repository contains my QA-focused submission for the OneCause Senior Test E
 ## Running Tests
 
 ### Unit Tests (Jasmine + Karma)
+
 ```bash
 ng test
 ```
@@ -46,6 +49,7 @@ src/app/app.component.spec.ts
 ```
 
 ### E2E Tests (Cypress)
+
 ```bash
 npx cypress open
 ```
@@ -58,10 +62,10 @@ Tests are located in: `cypress/e2e/`
 
 All test documentation is located in the `docs/` folder:
 
-| File                     | Description                                            |
-|--------------------------|--------------------------------------------------------|
-| `test-plan.md`           | QA test strategy, scope, and tooling overview          |
-| `test-cases.md`          | Manual test scenarios (happy, negative, edge cases)    |
+| File                       | Description                                                |
+| -------------------------- | ---------------------------------------------------------- |
+| `test-plan.md`             | QA test strategy, scope, and tooling overview              |
+| `test-cases.md`            | Manual test scenarios (happy, negative, edge cases)        |
 | `future-coverage-notes.md` | Areas noted for future testing (accessibility, i18n, etc.) |
 
 ---
@@ -100,7 +104,6 @@ This submission reflects how I approach QA as a blend of strategy, automation, a
 - 📄 [Test Cases](docs/test-cases.md)
 - 🔮 [Future Coverage Notes](docs/future-coverage-notes.md)
 
-
 ## 📁 Project Structure
 
 ```
@@ -133,4 +136,3 @@ This submission reflects how I approach QA as a blend of strategy, automation, a
 │       ├── takehome-presentation.md
 │       └── takehome-presentation.pdf
 ```
-

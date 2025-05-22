@@ -10,12 +10,12 @@ import { fakeAsync, tick } from '@angular/core/testing';
 // ✅ Mocks
 const mockCalculatorService = {
   generateNumber: jasmine.createSpy('generateNumber').and.returnValue(3),
-  checkAnswer: jasmine.createSpy('checkAnswer').and.returnValue(true)
+  checkAnswer: jasmine.createSpy('checkAnswer').and.returnValue(true),
 };
 
 const mockMessageService = {
   showSuccess: jasmine.createSpy('showSuccess'),
-  showError: jasmine.createSpy('showError')
+  showError: jasmine.createSpy('showError'),
 };
 
 describe('AppComponent', () => {
@@ -28,8 +28,8 @@ describe('AppComponent', () => {
       imports: [FormsModule],
       providers: [
         { provide: CalculatorService, useValue: mockCalculatorService },
-        { provide: MessageService, useValue: mockMessageService }
-      ]
+        { provide: MessageService, useValue: mockMessageService },
+      ],
     }).compileComponents();
 
     fixture = TestBed.createComponent(AppComponent);
@@ -78,10 +78,13 @@ describe('AppComponent', () => {
     spyOn(component, 'setFocus');
     component.checkAnswer();
 
-    expect(mockMessageService.showError).toHaveBeenCalledWith('Sorry, that is not correct. Please try again.', '');
+    expect(mockMessageService.showError).toHaveBeenCalledWith(
+      'Sorry, that is not correct. Please try again.',
+      ''
+    );
     expect(component.setFocus).toHaveBeenCalled();
   });
-    /**
+  /**
    * Unit Test: resetForm()
    * -----------------------
    * - Should generate new x and y values

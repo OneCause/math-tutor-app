@@ -28,11 +28,11 @@ This document outlines the testing approach for the Math Tutor application. It i
 
 ## Test Types and Tools
 
-| Type   | Tooling           | Target                                                |
-| ------ | ----------------- | ----------------------------------------------------- |
+| Type   | Tooling           | Target                                                 |
+| ------ | ----------------- | ------------------------------------------------------ |
 | Unit   | Jasmine + Karma   | AppComponent logic (input handling, answer evaluation) |
-| E2E    | Cypress           | Full user flow, from load to alert                    |
-| Manual | N/A (exploratory) | Edge cases, keyboard use, numeric parsing             |
+| E2E    | Cypress           | Full user flow, from load to alert                     |
+| Manual | N/A (exploratory) | Edge cases, keyboard use, numeric parsing              |
 
 Tests follow standard Arrange-Act-Assert structure for unit testing, and user-centric scenarios for E2E.
 
@@ -51,6 +51,7 @@ Tests follow standard Arrange-Act-Assert structure for unit testing, and user-ce
 Unit test coverage focuses on logic-level validation within the main application component:
 
 ### AppComponent
+
 - ✅ Component creation
 - ✅ `checkAnswer()` - success: shows success toast, calls `resetForm()`
 - ✅ `checkAnswer()` - failure: shows error toast, calls `setFocus()`

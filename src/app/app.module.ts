@@ -19,33 +19,27 @@ import { FormsModule } from '@angular/forms';
 import { MatTooltipModule } from '@angular/material/tooltip';
 
 const routes: Routes = [
-    {
-        path: '',
-        component: AppComponent
-    }
+  {
+    path: '',
+    component: AppComponent,
+  },
 ];
 
 @NgModule({
-    declarations: [
-        AppComponent
-    ],
-    imports: [
-        BrowserModule,
-        BrowserAnimationsModule,
-        ToastrModule.forRoot(),
-        MatCardModule,
-        MatFormFieldModule,
-        MatButtonModule,
-        FlexLayoutModule,
-        MatInputModule,
-        FormsModule,
-        MatTooltipModule
-    ],
-    providers: [
-        CalculatorService,
-        MessageService
-    ],
-    bootstrap: [AppComponent]
+  declarations: [AppComponent],
+  imports: [
+    BrowserModule,
+    BrowserAnimationsModule,
+    ToastrModule.forRoot(),
+    MatCardModule,
+    MatFormFieldModule,
+    MatButtonModule,
+    FlexLayoutModule,
+    MatInputModule,
+    FormsModule,
+    MatTooltipModule,
+  ],
+  providers: [CalculatorService, MessageService],
+  bootstrap: [AppComponent],
 })
-
-export class AppModule { }
+export class AppModule {}

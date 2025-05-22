@@ -54,6 +54,12 @@ Unit test coverage focuses on logic-level validation within the main application
 
 Mocks are used where applicable to isolate test behavior. Edge cases (non-numeric input, negative values) are included where meaningful.
 
+### MessageService Testing (Deferred)
+
+Direct unit testing of `MessageService` was deferred due to its dependency on `ToastrService` and `TOAST_CONFIG`, both of which require Angular DI configuration or mocking. This exceeds the scope of the current test cycle, as the toast integration is already indirectly verified via `AppComponent`.
+
+**TODO:** In future iterations, introduce a mock `ToastrService` or test module that provides the required configuration to fully isolate and test `MessageService` logic directly.
+
 ---
 
 ## Risks and Assumptions

@@ -1,16 +1,16 @@
-# [0.2.0](Erikande/math-tutor-app/compare/v0.1.0...v0.2.0) (2025-05-22)
-
-
-
-# [0.2.0](Erikande/math-tutor-app/compare/v0.1.0...v0.2.0) (2025-05-22)
-
-
-
-# [0.2.0](Erikande/math-tutor-app/compare/v0.1.0...v0.2.0) (2025-05-22)
-
-
-
 # Changelog
+
+## [0.2.0] - 2025-05-22
+
+### Documentation
+* Update test plan and README to reflect AppComponent as sole unit test target
+* Add TSDoc comments for Cypress TC01–TC04 tests
+* Organize documentation into dedicated `docs/` directory
+
+### Testing
+* Finalize TC01–TC04 Cypress tests with structured assertions and selector cleanup
+* Add test for invalid characters (TC04)
+* Add support for toast assertions and input validation feedback
 
 ## [0.1.0] - 2025-05-21
 

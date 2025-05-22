@@ -6,6 +6,8 @@
  * - TC02: Incorrect input → error toast
  * - TC03: Empty input → button disabled
  * - TC04: Non-numeric characters blocked
+ * - TC10: Enables button on valid input
+ * - TC11: Error toast for valid but incorrect signed input
  *
  * Tests rely on:
  * - Selectors defined in a centralized selector map

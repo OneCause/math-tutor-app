@@ -50,9 +50,14 @@ Tests follow standard Arrange-Act-Assert structure for unit testing, and user-ce
 
 Unit test coverage focuses on logic-level validation within the main application component:
 
-- `AppComponent`: random number generation, input handling, and result evaluation
+### AppComponent
+- ✅ Component creation
+- ✅ `checkAnswer()` - success: shows success toast, calls `resetForm()`
+- ✅ `checkAnswer()` - failure: shows error toast, calls `setFocus()`
+- ✅ `resetForm()` - clears input, calls `generateXandY()` and `setFocus()`
+- ✅ `generateXandY()` - calls `CalculatorService.generateNumber()` for both x and y
 
-Mocks are used where applicable to isolate test behavior. Edge cases (non-numeric input, negative values) are included where meaningful.
+Mocks are used where applicable to isolate test behavior. Jasmine spies are used to verify method calls and messaging without triggering actual side effects.
 
 ### MessageService Testing (Deferred)
 

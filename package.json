@@ -1,6 +1,6 @@
 {
   "name": "math-tutor-app",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
@@ -14,10 +14,10 @@
     "commit": "cz"
   },
   "config": {
-  "commitizen": {
-    "path": "cz-conventional-changelog"
-  }
-},
+    "commitizen": {
+      "path": "cz-conventional-changelog"
+    }
+  },
   "private": true,
   "dependencies": {
     "@angular/animations": "^19.2.8",

@@ -1,4 +1,10 @@
 # Changelog
+## [0.3.1] - 2025-05-22
+
+### Documentation
+* Add rendered Marp presentation PDF to deliverables
+* Update `README.md` with full project file tree diagram
+* Fix and validate relative links to test plan, test cases, and future coverage notes
 
 ## [0.3.0] - 2025-05-22
 

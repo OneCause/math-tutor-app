@@ -96,6 +96,6 @@ This submission reflects how I approach QA as a blend of strategy, automation, a
 
 ## Reference Documents
 
-- 📋 [Test Plan](./test-plan.md)
-- 📄 [Test Cases](./test-cases.md)
-- 🔮 [Future Coverage Notes](./future-coverage-notes.md)
+- 📋 [Test Plan](docs/test-plan.md)
+- 📄 [Test Cases](docs/test-cases.md)
+- 🔮 [Future Coverage Notes](docs/future-coverage-notes.md)

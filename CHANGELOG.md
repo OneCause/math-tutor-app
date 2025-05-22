@@ -1,3 +1,8 @@
+## [0.3.0] - 2025-05-22
+
+### Testing
+* Add Jasmine unit tests for AppComponent (random number generation, input parsing, answer evaluation)
+
 # Changelog
 
 ## [0.2.0] - 2025-05-22

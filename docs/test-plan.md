@@ -30,7 +30,7 @@ This document outlines the testing approach for the Math Tutor application. It i
 
 | Type   | Tooling           | Target                                                |
 | ------ | ----------------- | ----------------------------------------------------- |
-| Unit   | Jasmine + Karma   | CalculatorService, MessageService, AppComponent logic |
+| Unit   | Jasmine + Karma   | AppComponent logic (input handling, answer evaluation) |
 | E2E    | Cypress           | Full user flow, from load to alert                    |
 | Manual | N/A (exploratory) | Edge cases, keyboard use, numeric parsing             |
 
@@ -48,11 +48,9 @@ Tests follow standard Arrange-Act-Assert structure for unit testing, and user-ce
 
 ## Unit Testing Approach
 
-Unit test coverage focuses on logic-level validation:
+Unit test coverage focuses on logic-level validation within the main application component:
 
-- `CalculatorService`: sum calculation, input type handling
-- `MessageService`: correct feedback text
-- `AppComponent`: value handling and wiring
+- `AppComponent`: random number generation, input handling, and result evaluation
 
 Mocks are used where applicable to isolate test behavior. Edge cases (non-numeric input, negative values) are included where meaningful.
 

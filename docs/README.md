@@ -7,10 +7,8 @@ This repository contains my QA-focused submission for the OneCause Senior Test E
 - ✅ A test plan outlining test scope, strategy, tools, and risk areas
 - ✅ Manual test cases, including happy path, negative path, and edge behaviors
 - ✅ Cypress end-to-end tests for core functionality
-- ✅ Unit tests targeting core logic across services and components:
-  - `CalculatorService`: validates arithmetic correctness
-  - `MessageService`: ensures feedback messages align with input
-  - `AppComponent`: confirms value binding and basic flow
+- ✅ Unit tests targeting core logic within the main component:
+  - `AppComponent`: validates random number generation, input parsing, and result evaluation
 - ✅ Future coverage notes highlighting next-phase testing areas like accessibility and cross-platform support
 
 ---
@@ -44,7 +42,6 @@ ng test
 **Unit test files are located in:**
 
 ```
-src/app/services/*/*.spec.ts
 src/app/app.component.spec.ts
 ```
 
@@ -78,9 +75,6 @@ All test documentation is located in the `docs/` folder:
 
 ---
 
-
----
-
 ## Validation Flow Observations
 
 A number of edge cases (TC04, TC09–TC15) revealed that the app lacks a complete inline validation flow. While it correctly blocks invalid inputs and disables the "Answer" button for malformed entries, this behavior is not surfaced to the user in an intuitive way. Specifically:
@@ -92,6 +86,7 @@ A number of edge cases (TC04, TC09–TC15) revealed that the app lacks a complet
 
 This results in a passive validation experience that depends on browser behavior rather than explicit UX cues. While functionally sound, it reduces user confidence and discoverability.
 
+---
 
 ## Final Thoughts
 

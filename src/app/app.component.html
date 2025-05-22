@@ -1,45 +1,61 @@
 <!-- Math Challenge Card -->
-<div style="height: 100%; width: 100%; padding-top: 16px; background-color: antiquewhite;" fxLayout="row" fxLayoutAlign="center">
-  <div style="height: 400px; width: 400px;" fxLayout="column" fxLayoutAlign="center">
-    <mat-card fxLayout="column" fxFlexFill >
+<div
+  style="height: 100%; width: 100%; padding-top: 16px; background-color: antiquewhite"
+  fxLayout="row"
+  fxLayoutAlign="center"
+>
+  <div style="height: 400px; width: 400px" fxLayout="column" fxLayoutAlign="center">
+    <mat-card fxLayout="column" fxFlexFill>
       <mat-card-header fxFlex="none">
         <mat-card-title>Math Challenge</mat-card-title>
         <mat-card-subtitle>Addition</mat-card-subtitle>
       </mat-card-header>
-      <mat-card-content fxFlex style="padding-left: 16px; padding-right: 16px;">
+
+      <mat-card-content fxFlex style="padding-left: 16px; padding-right: 16px">
         <div fxLayout="column" fxLayoutAlign="end">
           <!-- X -->
-          <div fxLayout="row" style="padding: 8px; width: 100px;">
-            <div style="width: 100%; text-align: right;">
-              <span [innerHtml]="xValue"></span>
+          <div fxLayout="row" style="padding: 8px; width: 100px">
+            <div style="width: 100%; text-align: right">
+              <span [innerHtml]="xValue" data-testid="x-value"></span>
             </div>
           </div>
+
           <!-- Y -->
-          <div fxLayout="row" style="padding: 8px; width: 100px; border-bottom: 2px solid black;">
-            <div>
-              +
-            </div>
-            <div style="width: 100%; text-align: right;">
-              <span [innerHtml]="yValue"></span>
+          <div fxLayout="row" style="padding: 8px; width: 100px; border-bottom: 2px solid black">
+            <div data-testid="operator">+</div>
+            <div style="width: 100%; text-align: right">
+              <span [innerHtml]="yValue" data-testid="y-value"></span>
             </div>
           </div>
+
           <!-- Answer -->
-          <mat-form-field style="padding: 8px; width: 92px;">
+          <mat-form-field style="padding: 8px; width: 92px">
             <mat-label>Answer</mat-label>
-            <input #appInputSelect matInput type="number" [(ngModel)]="answer" style="text-align: right;">
+            <input
+              #appInputSelect
+              matInput
+              type="number"
+              [(ngModel)]="answer"
+              style="text-align: right"
+              data-testid="user-input"
+            />
           </mat-form-field>
         </div>
       </mat-card-content>
-      <mat-card-actions fxFlex="none" style="padding-left: 16px; padding-right: 16px;">
+
+      <mat-card-actions fxFlex="none" style="padding-left: 16px; padding-right: 16px">
         <div matTooltip="Please provide an answer." [matTooltipDisabled]="answer !== null">
-          <button mat-raised-button 
-                  color="primary" 
-                  (click)="checkAnswer()" 
-                  [disabled]="answer == null">
+          <button
+            mat-raised-button
+            color="primary"
+            (click)="checkAnswer()"
+            [disabled]="answer == null"
+            data-testid="answer-button"
+          >
             Answer
           </button>
         </div>
       </mat-card-actions>
-    </mat-card>  
+    </mat-card>
   </div>
 </div>

@@ -1,0 +1,8 @@
+{
+  "xValue": "[data-testid='x-value']",
+  "yValue": "[data-testid='y-value']",
+  "userInput": "[data-testid='user-input']",
+  "answerButton": "[data-testid='answer-button']",
+  "toastSuccess": ".toast-success",
+  "toastError": ".toast-error"
+}

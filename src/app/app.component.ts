@@ -5,48 +5,50 @@ import { CalculatorService } from './services/calculator-service/calculator.serv
 import { MessageService } from './services/message-service/message.service';
 
 @Component({
-    selector: 'app-root',
-    templateUrl: './app.component.html',
-    styleUrls: ['./app.component.css'],
-    standalone: false
+  selector: 'app-root',
+  templateUrl: './app.component.html',
+  styleUrls: ['./app.component.css'],
+  standalone: false,
 })
 export class AppComponent {
-    title = 'math-tutor-app';
-    @ViewChild('appInputSelect') input: ElementRef;
+  title = 'math-tutor-app';
+  @ViewChild('appInputSelect') input: ElementRef;
 
-    xValue: number;
-    yValue: number;
-    answer: number;
+  xValue: number;
+  yValue: number;
+  answer: number;
 
-    constructor(private calculatorService: CalculatorService,
-                private messageService: MessageService) {
-        this.generateXandY();
-        this.answer = null;
+  constructor(
+    private calculatorService: CalculatorService,
+    private messageService: MessageService
+  ) {
+    this.generateXandY();
+    this.answer = null;
+  }
+
+  checkAnswer(): void {
+    if (this.calculatorService.checkAnswer(this.xValue, this.yValue, this.answer)) {
+      this.messageService.showSuccess("That's right! Try another one.", '');
+      setTimeout(() => this.resetForm(), 500);
+    } else {
+      this.messageService.showError('Sorry, that is not correct. Please try again.', '');
+      this.setFocus();
     }
+  }
 
-    checkAnswer(): void {
-        if (this.calculatorService.checkAnswer(this.xValue, this.yValue, this.answer)) {
-            this.messageService.showSuccess('That\'s right! Try another one.', '');
-            setTimeout(() => this.resetForm(), 500);
-        } else {
-            this.messageService.showError('Sorry, that is not correct. Please try again.', '');
-            this.setFocus();
-        }
-    }
+  resetForm(): void {
+    this.generateXandY();
+    this.answer = null;
+    this.setFocus();
+  }
 
-    resetForm(): void {
-        this.generateXandY();
-        this.answer = null;
-        this.setFocus();
-    }
+  setFocus(): void {
+    const inputBox: HTMLInputElement = this.input.nativeElement as HTMLInputElement;
+    this.input.nativeElement.focus();
+  }
 
-    setFocus(): void {
-        const inputBox: HTMLInputElement = this.input.nativeElement as HTMLInputElement;
-        this.input.nativeElement.focus();
-    }
-
-    generateXandY(): void {
-        this.xValue = this.calculatorService.generateNumber();
-        this.yValue = this.calculatorService.generateNumber();
-    }
+  generateXandY(): void {
+    this.xValue = this.calculatorService.generateNumber();
+    this.yValue = this.calculatorService.generateNumber();
+  }
 }

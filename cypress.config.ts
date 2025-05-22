@@ -1,4 +1,4 @@
-import { defineConfig } from 'cypress'
+import { defineConfig } from 'cypress';
 
 export default defineConfig({
   viewportHeight: 900,
@@ -8,4 +8,4 @@ export default defineConfig({
     baseUrl: 'http://localhost:4200/',
     specPattern: 'cypress/e2e/**/*.cy.{js,jsx,ts,tsx}',
   },
-})
+});
